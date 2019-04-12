@@ -19188,11 +19188,13 @@ var q = [2,
 
 var button1 = document.querySelector("#btn1");
 var button2 = document.querySelector("#btn2");
+var button3 = document.querySelector("#btn3");
 var have_result = false;
 
 
 button1.addEventListener("click", cal_num);
 button2.addEventListener("click", cal_star);
+button3.addEventListener("click", count_num);
 
 function cal_num() {
     var input = document.querySelector("#firstquestion").value;
@@ -19231,6 +19233,40 @@ function cal_star() {
     });
     if (have_result) {
         alert("穷举完毕，按F12进console看结果");
+    } else {
+        alert("穷举完毕，没有结果");
+    }
+}
+
+function count_num() {
+    var answered = document.querySelector("#answeredNumber").value;
+    var answeredNum = Number(answered);
+    var targetNum = document.querySelector("#numberToCount").value;
+    var counter = 0;
+    var option = 0;
+    var divided = 2;
+    have_result = false;
+
+    if (document.querySelector("#inlineRadio1").checked) {
+        option = 1;
+    } else if (document.querySelector("#inlineRadio2").checked) {
+        option = 0;
+    } else {
+        divided = 1;
+    }
+
+    for (var i = 0; i < (answeredNum + 1); i++) {
+        if (i % divided === option && i.toString().includes(targetNum)) {
+            counter++;
+            // console.log("i = " + i);
+            // console.log("counter = " + counter);
+            have_result = true;
+        }
+    }
+
+    if (have_result) {
+        console.log(counter);
+        alert("穷举完毕，数字 "+ targetNum + " 共出现 " + counter + " 次");
     } else {
         alert("穷举完毕，没有结果");
     }
