@@ -1,0 +1,54 @@
+<html>
+
+<head>
+    <title>2B式质数乘积穷举游戏</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="display-4">开始穷举吧!</h1>
+            <p class="lead">用现代智能（智障穷举）的方法来搞定用质数出题的征婚妹子</p>
+            <hr class="my-4">
+            <p>此app功能单一且非常简陋，顺便高度怀疑这种妹子是在面试钓鱼，请保持警惕</p>
+
+        </div>
+        <div class="row">
+            <div class="col-1 col-md-3"></div>
+            <div class="col-10 col-md-6 text-center">
+                <div class="form-group">
+                    <h1>PART1:</h1>
+                    <label>已知乘积求2个质数</label>
+                    <input type="number" class="form-control text-center" id="firstquestion" placeholder="7140229933">
+                    <small class="form-text text-muted">结果将弹窗显示</small>
+                    <button type="button" class="btn btn-primary" id="btn1">算一下！</button>
+                </div>
+            </div>
+            <div class="col-1 col-md-3"></div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-1 col-md-3"></div>
+            <div class="col-10 col-md-6 text-center">
+                <div class="form-group">
+                    <h1>PART2: </h1>
+                    <label>乘积结果末尾带星号</label>
+                    <input type="number" class="form-control mb-2" id="totalLength" placeholder="总共位数">
+                    <input type="text" class="form-control mb-2" id="secondquestion" placeholder="已知数字6541367">
+                    <input type="number" class="form-control mb-2" id="no_of_star" placeholder="末尾星号数量">
+                    <small class="form-text text-muted">本计算非常耗时，会有假死现象，请耐心等待！</small>
+                    <button type="button" class="btn btn-primary" id="btn2">试试！</button>
+                </div>
+            </div>
+            <div class="col-1 col-md-3"></div>
+        </div>
+
+
+        <script src="zhishu.js"></script>
+    </div>
+</body>
+
+</html>
